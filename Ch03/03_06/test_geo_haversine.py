@@ -6,4 +6,4 @@ from numpy import float64
 
 @given(*[floats(-90, 90), floats(-180, 180)] * 2)
 def test_haversine(lat1, lng1, lat2, lng2):
-    assert type(haversine(lat1, lng1, lat2, lng2)) is float64
+    assert haversine(lat1, lng1, lat2, lng2) >= 0
